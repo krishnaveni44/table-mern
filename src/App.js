@@ -7,8 +7,10 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CreateUser from './CreateUser';
 import UpdateUser from './UpdateUser';
+import Register from './Register';
 import Users from './Users';
-
+import Login from './Login';
+import Home from './Home';
 
 function App() {
 
@@ -26,6 +28,9 @@ const [count, setCount] = useState(0);
    <div>
     <BrowserRouter>
     <Routes>
+    <Route path='/login' element={<Login />}></Route>
+    <Route path='/home' element={<Home />}></Route>   
+    <Route path='/register' element={<Register />}></Route>
     <Route path='/' element={<Users />}></Route>
     <Route path='/create' element={<CreateUser />}></Route>
     <Route path='/update/:id' element={<UpdateUser />}></Route>
