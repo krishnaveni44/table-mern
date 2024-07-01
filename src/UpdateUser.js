@@ -23,7 +23,7 @@ export default function UpdateUser() {
 
     const Update = (e) => {
       e.preventDefault();
-      axios.put("http://localhost:5000/updateUser/"+id, {name, email, age})
+      axios.put("https://table-mern-server.onrender.com/updateUser/"+id, {name, email, age})
       .then(result => {
         console.log(result)
         navigate('/')
