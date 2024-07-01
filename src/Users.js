@@ -12,13 +12,13 @@ export default function Users() {
 const [users,setUsers] = useState([])
 
  useEffect(()=> {
-    axios.get('http://localhost:5000')
+    axios.get('https://table-mern-server.onrender.com')
     .then(result => setUsers(result.data))
     .catch(err => console.log(err))
   },[])
 
   const handleDelete = (id) => {
-     axios.delete('http://localhost:5000/deleteUser/'+id)
+     axios.delete('https://table-mern-server.onrender.com/deleteUser/'+id)
      .then(res => {
       console.log(res)
       window.location.reload()

@@ -16,7 +16,7 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/register', {name, email, password})
+    axios.post('https://table-mern-server.onrender.com/register', {name, email, password})
     .then(result => {console.log(result)
       navigate('/login')
     }) 

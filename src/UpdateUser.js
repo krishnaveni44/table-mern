@@ -12,7 +12,7 @@ export default function UpdateUser() {
     const navigate = useNavigate()
 
     useEffect(()=> {
-      axios.get('http://localhost:5000/getUser/'+id)
+      axios.get('https://table-mern-server.onrender.com/getUser/'+id)
       .then(result => {console.log(result)
         setName(result.data.name)
         setEmail(result.data.email)
