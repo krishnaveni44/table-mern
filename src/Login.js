@@ -17,7 +17,7 @@ function Login() {
     .then(result => {
     console.log(result)
     if(result.data === "Success"){
-    navigate('/')
+    navigate('/users')
   }
     })
     .catch(err => console.log(err))
@@ -58,7 +58,7 @@ function Login() {
           </button>
           </form>
           <p>Already Have an Account</p>
-          <Link to="/register" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+          <Link to="/" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
             Sign Up
           </Link>
       </div>
