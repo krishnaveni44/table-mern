@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CreateUser from './CreateUser';
-import UpdateUser from './UpdateUser';
-import Register from './Register';
-import Users from './Users';
-import Login from './Login';
-import Home from './Home';
+import CreateUser from './components/CreateUser';
+import UpdateUser from './components/UpdateUser';
+import Register from './components/Register';
+import Users from './components/Users';
+import Login from './components/Login';
+import Home from './components/Home';
 
 function App() {
 
