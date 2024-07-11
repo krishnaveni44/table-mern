@@ -12,7 +12,7 @@ export default function Users() {
 const [users,setUsers] = useState([])
 
  useEffect(()=> {
-    axios.get('https://table-mern-server.onrender.com')
+    axios.get('https://table-mern-server.onrender.com/userss')
     .then(result => setUsers(result.data))
     .catch(err => console.log(err))
   },[])

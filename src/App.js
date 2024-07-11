@@ -1,4 +1,4 @@
-
+ 
 import './App.css';
 import React from "react";
 import { useEffect, useState } from "react";
@@ -28,10 +28,10 @@ const [count, setCount] = useState(0);
    <div>
     <BrowserRouter>
     <Routes>
+    <Route path='/' element={<Register />}></Route>
     <Route path='/login' element={<Login />}></Route>
     <Route path='/home' element={<Home />}></Route>   
-    <Route path='/' element={<Register />}></Route>
-    <Route path='/users' element={<Users />}></Route>
+    <Route path='/userss' element={<Users />}></Route>
     <Route path='/create' element={<CreateUser />}></Route>
     <Route path='/update/:id' element={<UpdateUser />}></Route>
     </Routes>

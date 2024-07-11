@@ -15,7 +15,7 @@ export default function CreateUser() {
     axios.post("https://table-mern-server.onrender.com/createUser",{name, email, age})
     .then(result => {
       console.log(result)
-      navigate('/users')
+      navigate('/userss')
     })
     .catch(err => console.log(err))
   }

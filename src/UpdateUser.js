@@ -26,7 +26,7 @@ export default function UpdateUser() {
       axios.put("https://table-mern-server.onrender.com/updateUser/"+id, {name, email, age})
       .then(result => {
         console.log(result)
-        navigate('/users')
+        navigate('/userss')
       })
       .catch(err => console.log(err))
     }
