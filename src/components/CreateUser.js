@@ -6,13 +6,15 @@ import {useNavigate} from 'react-router-dom';
 export default function CreateUser() {
 
   const [name, setName] = useState()
-  const [email, setEmail] = useState()
-  const [age, setAge] = useState()
+  const [title, setTitle] = useState()
+  const [description, setDescription] = useState()
+  const [image,setImage] = useState()
+
   const navigate = useNavigate()
 
   const Submit = (e) => {
     e.preventDefault();
-    axios.post("https://table-mern-server.onrender.com/createUser",{name, email, age})
+    axios.post("https://table-mern-server.onrender.com/createUser",{name, title, description, image})
     .then(result => {
       console.log(result)
       navigate('/userss')
@@ -24,21 +26,29 @@ export default function CreateUser() {
     <div className= 'd-flex vh-100 bg-primary justify-content-center align-items-center'>
       <div className='w-50 bg-white rounded p-3'>
         <form onSubmit={Submit}>
-          <h2>Add User</h2>
+          <h2>Add Blog</h2>
           <div className='mb-2'>
-            <label htmlFor="">Name</label>
-            <input type="text" placeholder="Enter Name" className='form-control'
+            <label htmlFor="">User Name</label>
+            <input type="text" placeholder="Enter User Name" className='form-control'
             onChange={(e) => setName(e.target.value)}/>
           </div>
+
           <div className='mb-2'>
-            <label htmlFor="">Email</label>
-            <input type="text" placeholder="Enter Email" className='form-control'
-            onChange={(e) => setEmail(e.target.value)}/>
+            <label htmlFor="">Blog Title</label>
+            <input type="text" placeholder="Enter Blog Title" className='form-control'
+            onChange={(e) => setTitle(e.target.value)}/>
           </div>
+
           <div className='mb-2'>
-            <label htmlFor="">Age</label>
+            <label htmlFor="">Blog Description</label>
+            <input type="text" placeholder="Enter Blog Description" className='form-control'
+            onChange={(e) => setDescription(e.target.value)}/>
+          </div>
+
+          <div className='mb-2'>
+            <label htmlFor="">Blog ImageURL</label>
             <input type="text" placeholder="Enter Age" className='form-control'
-            onChange={(e) => setAge(e.target.value)}/>
+            onChange={(e) => setImage(e.target.value)}/>
           </div>
           <button className='btn btn-success'>Submit</button>
         </form>
