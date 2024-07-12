@@ -8,13 +8,13 @@ export default function CreateUser() {
   const [name, setName] = useState()
   const [title, setTitle] = useState()
   const [description, setDescription] = useState()
-  const [image,setImage] = useState()
+  // const [image,setImage] = useState()
 
   const navigate = useNavigate()
 
   const Submit = (e) => {
     e.preventDefault();
-    axios.post("https://table-mern-server.onrender.com/createUser",{name, title, description, image})
+    axios.post("https://table-mern-server.onrender.com/createUser",{name, title, description})
     .then(result => {
       console.log(result)
       navigate('/userss')
@@ -45,11 +45,11 @@ export default function CreateUser() {
             onChange={(e) => setDescription(e.target.value)}/>
           </div>
 
-          <div className='mb-2'>
+          {/* <div className='mb-2'>
             <label htmlFor="">Blog ImageURL</label>
-            <input type="text" placeholder="Enter Age" className='form-control'
+            <input type="text" placeholder="Enter ImageURL" className='form-control'
             onChange={(e) => setImage(e.target.value)}/>
-          </div>
+          </div> */}
           <button className='btn btn-success'>Submit</button>
         </form>
       </div>  
